@@ -3,6 +3,8 @@ const DOMNodeCollection = require("./dom_node_collection");
 var docReady = false;
 var docFnArr = [];
 
+$( () => alert('the document is ready'));
+
 window.$l = (arg) => {
   if (typeof arg === 'string') {
     // css selector
@@ -10,6 +12,7 @@ window.$l = (arg) => {
     return new DOMNodeCollection(Array.from(nodelist));
   } else if (typeof arg === "function") {
     if (docReady === false) {
+      
       docFnArr.push(arg);
     } else {
       arg();

@@ -17,6 +17,7 @@ DOMNodeCollection.prototype.html = function(html) {
 
 DOMNodeCollection.prototype.empty = function() {
   this.html("");
+  
 };
 
 DOMNodeCollection.prototype.append = function(el) {
